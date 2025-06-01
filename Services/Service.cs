@@ -1,4 +1,5 @@
 ﻿using CodeFirstAproach.contracts.requests;
+using CodeFirstAproach.contracts.response;
 using CodeFirstAproach.Model;
 using CodeFirstAproach.Repositories;
 using CodeFirstAproach.Repositories.abstractions;
@@ -63,5 +64,12 @@ public class Service: IService
         };
         await prescriptionRepository.AddPrescription(prescription, medicaments, cancellationToken);
         return true;
+    }
+
+    public async Task<responseDTO> GetPatientInfo(int patientID, CancellationToken cancellationToken)
+    {
+        responseDTO responseDTO = new responseDTO();
+        
+        return responseDTO;
     }
 }

@@ -1,6 +1,7 @@
 ﻿using CodeFirstAproach.DAL;
 using CodeFirstAproach.Model;
 using CodeFirstAproach.Repositories.abstractions;
+using Microsoft.EntityFrameworkCore;
 
 namespace CodeFirstAproach.Repositories;
 
@@ -25,5 +26,23 @@ public class PrescriptionRepository: IPrescriptionRepository
         }
         await _context1.SaveChangesAsync(token);
         return true;
+    }
+
+    public async Task<List<Prescription>> GetPrescriptionsByPatientId(int patientId, CancellationToken token)
+    {
+        return await _context1.Prescriptions
+            .Where(p => p.IdPatient == patientId)
+            .Include(p => p.Patient)
+            .Include(p => p.Doctor)
+            .ToListAsync(token);
+    }
+    public async Task<List<PrescriptionMedicament>> GetPrescriptionMedicamentsByPrescriptionIdAsync(
+        int idPrescription,
+        CancellationToken token)
+    {
+        return await _context1.PrescriptionMedicaments
+            .Where(pm => pm.IdPrescription == idPrescription)
+            .Include(pm => pm.Medicament)
+            .ToListAsync(token);
     }
 }

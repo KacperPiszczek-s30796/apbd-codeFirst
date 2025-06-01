@@ -15,15 +15,30 @@ public class Controller: ControllerBase
         this.service = service;
     }
     [HttpGet]
-    public async Task<IActionResult> GetTrips([FromQuery] int PatientId = 1, CancellationToken token = default)
+    public async Task<IActionResult> GetTrips([FromQuery] int PatientId, CancellationToken token = default)
     {
-        return Ok();
+        try
+        {
+            var result = service.GetPatientInfo(PatientId, token);
+            return Ok(result);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
 
     [HttpPost]
     public async Task<IActionResult> isssuePrescription([FromBody] requestDTO requestDto, CancellationToken token)
     {
-        var result = service.issuePrescription(requestDto, token);
-        return Ok();
+        try
+        {
+            var result = service.issuePrescription(requestDto, token);
+            return Ok(result);
+        }
+        catch (Exception e)
+        {
+            return BadRequest(e.Message);
+        }
     }
 }
