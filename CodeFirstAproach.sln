@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstAproach", "CodeFirstAproach\CodeFirstAproach.csproj", "{386F96EF-FD91-4EEB-B7AF-835D2F0E113C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestCodeFirstAproach", "TestCodeFirstAproach\TestCodeFirstAproach.csproj", "{7D52DC78-DF05-40A2-8221-A3028DF29C4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{386F96EF-FD91-4EEB-B7AF-835D2F0E113C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{386F96EF-FD91-4EEB-B7AF-835D2F0E113C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{386F96EF-FD91-4EEB-B7AF-835D2F0E113C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{386F96EF-FD91-4EEB-B7AF-835D2F0E113C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D52DC78-DF05-40A2-8221-A3028DF29C4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D52DC78-DF05-40A2-8221-A3028DF29C4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D52DC78-DF05-40A2-8221-A3028DF29C4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D52DC78-DF05-40A2-8221-A3028DF29C4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
