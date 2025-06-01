@@ -1,3 +1,9 @@
+using CodeFirstAproach.DAL;
+using CodeFirstAproach.middleware;
+using CodeFirstAproach.Repositories.extensions;
+using CodeFirstAproach.Services.extentions;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +12,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddProblemDetails();
+builder.Services.AddInfrastructureServices();
+builder.Services.AddInfrastructureRepositories();
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddDbContext<DbContext1>(options =>
+    options.UseSqlServer(
+        "Server=localhost\\SQLEXPRESS;Database=APBD_31_05_2025;Trusted_Connection=True;Encrypt=True;TrustServerCertificate=True;"));
 
 var app = builder.Build();
 
