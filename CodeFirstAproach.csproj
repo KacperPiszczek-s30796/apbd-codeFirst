@@ -18,11 +18,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="contracts\requests\" />
-      <Folder Include="contracts\response\" />
-      <Folder Include="Controllers\" />
       <Folder Include="exceptions\" />
-      <Folder Include="Repositories\abstractions\" />
     </ItemGroup>
 
 </Project>
