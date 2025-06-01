@@ -1,5 +1,6 @@
 ﻿using CodeFirstAproach.contracts.requests;
 using CodeFirstAproach.contracts.response;
+using CodeFirstAproach.exceptions;
 using CodeFirstAproach.Model;
 using CodeFirstAproach.Repositories;
 using CodeFirstAproach.Repositories.abstractions;
@@ -39,7 +40,7 @@ public class Service: IService
         {
             if (++i > 10)
             {
-                return false;
+                throw new medicament10limitBreachedException();
             }
             PrescriptionMedicament m = new PrescriptionMedicament()
             {
@@ -49,7 +50,7 @@ public class Service: IService
             };
             if (!(await medicamentRepository.DoesMedicamentExist(medicament.IdMedicament, cancellationToken)))
             {
-                return false;
+                throw new MedicationDoesnotExistException(medicament.IdMedicament);
             }
             
             medicaments.Add(m);
