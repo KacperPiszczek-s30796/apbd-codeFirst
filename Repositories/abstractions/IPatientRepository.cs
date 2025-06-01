@@ -1,6 +1,8 @@
-﻿namespace CodeFirstAproach.Repositories.abstractions;
+﻿using CodeFirstAproach.Model;
 
-public class IPatientRepository
+namespace CodeFirstAproach.Repositories.abstractions;
+
+public interface IPatientRepository
 {
-    
+    public Task<bool> createPatientIfDoesntExist(Patient patient, CancellationToken token);
 }

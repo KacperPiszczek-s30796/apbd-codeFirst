@@ -1,6 +1,9 @@
-﻿namespace CodeFirstAproach.Repositories.abstractions;
+﻿using CodeFirstAproach.Model;
 
-public class IPrescriptionRepository
+namespace CodeFirstAproach.Repositories.abstractions;
+
+public interface IPrescriptionRepository
 {
-    
+    public Task<bool> AddPrescription(Prescription prescription,
+        List<PrescriptionMedicament> prescriptionMedicaments, CancellationToken token);
 }

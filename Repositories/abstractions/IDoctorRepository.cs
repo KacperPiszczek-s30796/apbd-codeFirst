@@ -1,6 +1,6 @@
 ﻿namespace CodeFirstAproach.Repositories.abstractions;
 
-public class IDoctorRepository
+public interface IDoctorRepository
 {
     
 }

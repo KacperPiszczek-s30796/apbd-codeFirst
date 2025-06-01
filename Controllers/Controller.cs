@@ -1,4 +1,6 @@
-﻿using CodeFirstAproach.Services.abstractions;
+﻿using CodeFirstAproach.contracts.requests;
+using CodeFirstAproach.Model;
+using CodeFirstAproach.Services.abstractions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CodeFirstAproach.Controllers;
@@ -15,6 +17,13 @@ public class Controller: ControllerBase
     [HttpGet]
     public async Task<IActionResult> GetTrips([FromQuery] int PatientId = 1, CancellationToken token = default)
     {
+        return Ok();
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> isssuePrescription([FromBody] requestDTO requestDto, CancellationToken token)
+    {
+        var result = service.issuePrescription(requestDto, token);
         return Ok();
     }
 }
