@@ -91,4 +91,23 @@ public class AuthService: IAuthService
 
         return new JwtSecurityTokenHandler().WriteToken(token);
     }
+    public async Task<TokenPairDto?> RefreshTokenAsync(string refreshToken, CancellationToken cancellationToken)
+    {
+        var user = await _userRepository.GetByRefreshTokenAsync(refreshToken, cancellationToken);
+
+        if (user == null)
+            return null;
+
+        var newAccessToken = GenerateJwtToken(user);
+        var newRefreshToken = Guid.NewGuid().ToString();
+
+        user.RefreshToken = newRefreshToken;
+        await _userRepository.UpdateAsync(user, cancellationToken);
+
+        return new TokenPairDto
+        {
+            AccessToken = newAccessToken,
+            RefreshToken = newRefreshToken
+        };
+    }
 }

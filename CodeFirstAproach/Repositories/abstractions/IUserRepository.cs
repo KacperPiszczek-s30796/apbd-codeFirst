@@ -8,4 +8,5 @@ public interface IUserRepository
     Task AddAsync(User user, CancellationToken cancellationToken);
     Task UpdateAsync(User user, CancellationToken cancellationToken);
     Task SaveChangesAsync(CancellationToken cancellationToken);
+    public Task<User?> GetByRefreshTokenAsync(string refreshToken, CancellationToken cancellationToken);
 }
