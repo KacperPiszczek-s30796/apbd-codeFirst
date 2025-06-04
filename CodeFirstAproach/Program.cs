@@ -1,3 +1,4 @@
+using CodeFirstAproach;
 using CodeFirstAproach.DAL;
 using CodeFirstAproach.middleware;
 using CodeFirstAproach.Repositories.extensions;
@@ -19,7 +20,7 @@ builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddDbContext<DbContext1>(options =>
     options.UseSqlServer(
         "Server=localhost\\SQLEXPRESS;Database=APBD_31_05_2025;Trusted_Connection=True;Encrypt=True;TrustServerCertificate=True;"));
-
+builder.Services.Configure<JwtSettings>(builder.Configuration.GetSection("JwtSettings"));
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -10,6 +10,7 @@ public static class ServicesCollectionExtensions
         services.AddScoped<IMedicamentRepository, MedicamentRepository>();
         services.AddScoped<IPatientRepository, PatientRepository>();
         services.AddScoped<IPrescriptionRepository, PrescriptionRepository>();
+        services.AddScoped<IUserRepository, UserRepository>();
         return services;
     }
 }
