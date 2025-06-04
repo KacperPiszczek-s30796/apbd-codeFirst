@@ -168,3 +168,10 @@ D:\studia\APBD\CodeFirstAproach\CodeFirstAproach\obj\Debug\net8.0\refint\CodeFir
 D:\studia\APBD\CodeFirstAproach\CodeFirstAproach\obj\Debug\net8.0\CodeFirstAproach.pdb
 D:\studia\APBD\CodeFirstAproach\CodeFirstAproach\obj\Debug\net8.0\CodeFirstAproach.genruntimeconfig.cache
 D:\studia\APBD\CodeFirstAproach\CodeFirstAproach\obj\Debug\net8.0\ref\CodeFirstAproach.dll
+D:\studia\APBD\CodeFirstAproach\CodeFirstAproach\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+D:\studia\APBD\CodeFirstAproach\CodeFirstAproach\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\studia\APBD\CodeFirstAproach\CodeFirstAproach\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
+D:\studia\APBD\CodeFirstAproach\CodeFirstAproach\bin\Debug\net8.0\Microsoft.Extensions.WebEncoders.dll
+D:\studia\APBD\CodeFirstAproach\CodeFirstAproach\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+D:\studia\APBD\CodeFirstAproach\CodeFirstAproach\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+D:\studia\APBD\CodeFirstAproach\CodeFirstAproach\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
