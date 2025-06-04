@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace CodeFirstAproach.Controllers;
 
 [ApiController]
-[Route("api/[controller]")]
+[Route("apiA/[controller]")]
 public class AuthController : ControllerBase
 {
     private readonly IAuthService _authService;
