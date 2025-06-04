@@ -13,11 +13,7 @@ public class DbContext1: DbContext
     
     public DbSet<User> Users { get; set; }
 
-    public DbContext1()
-    {
-    }
-
-    public DbContext1(DbContextOptions options) : base(options)
+    public DbContext1(DbContextOptions<DbContext1> options) : base(options)
     {
     }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
